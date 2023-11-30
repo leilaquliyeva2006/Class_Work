@@ -1,7 +1,16 @@
 const btns = document.querySelectorAll("button");
 
-btns.forEach(function (btn) {
-  btn.addEventListener("click", function (event) {
-    event.target.style.color = "green";
-  });
-});
+const div = document.querySelector("div")
+
+
+function changeStyle(event){
+  if(event.target!=div){
+event.target.style.color = 'green'
+  }
+  
+  console.log(event.target)
+}
+
+
+
+div.addEventListener('click',changeStyle)
