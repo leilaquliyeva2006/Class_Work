@@ -1,13 +1,10 @@
-const input = document.querySelectorAll('input')
+const textarea = document.querySelector('textarea')
+const span = document.querySelector('span')
 
-const btn = document.querySelector('button')
 
-btn.addEventListener('click',function(){
-  if(input[0].value === input[1].value){
-    alert('Same type')
-  }
-  else{
-    alert('different type')
-  }
+textarea.addEventListener('input',function(event){
+  const length = event.target.value.length
+  span.innerText = 'Count symbol ' + length
 })
+
 
